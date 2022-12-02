@@ -6,6 +6,7 @@ specifiers:
   '@types/react': 18.0.25
   '@types/react-dom': 18.0.9
   autoprefixer: ^10.4.13
+  class-variance-authority: ^0.3.0
   eslint: 8.28.0
   eslint-config-next: 13.0.6
   eslint-config-prettier: ^8.5.0
@@ -17,6 +18,7 @@ specifiers:
   prettier-plugin-tailwindcss: ^0.2.0
   react: 18.2.0
   react-dom: 18.2.0
+  react-icons: ^4.7.1
   tailwindcss: ^3.2.4
   typescript: 4.9.3
 
@@ -25,11 +27,13 @@ dependencies:
   '@types/node': 18.11.10
   '@types/react': 18.0.25
   '@types/react-dom': 18.0.9
+  class-variance-authority: 0.3.0_typescript@4.9.3
   eslint: 8.28.0
   eslint-config-next: 13.0.6_hsf322ms6xhhd4b5ne6lb74y4a
   next: 13.0.6_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-icons: 4.7.1_react@18.2.0
   typescript: 4.9.3
 
 devDependencies:
@@ -830,6 +834,20 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /class-variance-authority/0.3.0_typescript@4.9.3:
+    resolution:
+      {
+        integrity: sha512-TFO+pzY9Gedqv8crPhprd647wxhvfpKevPPjiMcteEWsnkHX9yZrD1xMY3ZhRZnLwHUHCCP0LYO6KZIVag/5wQ==,
+      }
+    peerDependencies:
+      typescript: '>= 4.5.5 < 5'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      typescript: 4.9.3
+    dev: false
 
   /clean-stack/2.2.0:
     resolution:
@@ -2934,6 +2952,17 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-icons/4.7.1_react@18.2.0:
+    resolution:
+      {
+        integrity: sha512-yHd3oKGMgm7zxo3EA7H2n7vxSoiGmHk5t6Ou4bXsfcgWyhfDKMpyKfhHR6Bjnn63c+YXBLBPUql9H4wPJM6sXw==,
+      }
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-is/16.13.1:
