@@ -1,15 +1,17 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './styles.module.css';
-import backgroundImage from '../../../../public/hero-background.avif';
+import { BsArrowRight } from 'react-icons/bs';
 
 export const Hero = () => {
   return (
     <div className={styles.heroBackground}>
-      <div className="flex items-center justify-center">
+      <div className="flex flex-col items-center justify-center">
         <Image
-          src={backgroundImage}
+          src="/hero-background.avif"
           alt="hero background"
+          width={900}
+          height={900}
           className={styles.heroImage}
         />
         <div className="z-20 mt-[370px] px-8 text-center">
@@ -30,6 +32,30 @@ export const Hero = () => {
           </p>
         </div>
         <div className={styles.heroFade}></div>
+        <div className="z-30 mt-10 flex flex-wrap items-center justify-center gap-6 px-10">
+          <Link
+            href="https://vercel.com/templates/next.js/nextjs-boilerplate"
+            className="flex items-center justify-center gap-3 rounded-full bg-black px-5 py-3 font-grotesk font-medium text-white"
+          >
+            <svg
+              aria-label="Vercel Logo"
+              fill="currentColor"
+              viewBox="0 0 75 65"
+              height="15.600000000000001"
+              width="18"
+            >
+              <path d="M37.59.25l36.95 64H.64l36.95-64z" />
+            </svg>
+            Start Deploying
+          </Link>
+          <Link
+            href="/conf"
+            className="flex items-center justify-center gap-3 rounded-full border border-solid border-neutral-800 bg-white px-5 py-3 font-grotesk font-medium text-black"
+          >
+            Replay The Event
+            <BsArrowRight />
+          </Link>
+        </div>
       </div>
     </div>
   );

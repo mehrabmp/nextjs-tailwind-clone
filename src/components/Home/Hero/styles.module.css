@@ -5,8 +5,6 @@
 }
 
 .heroImage {
-  width: 900px;
-  height: 900px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,6 +13,8 @@
   mask: url('/background-mask.png');
   mask-size: cover;
   transform: translateY(-100px);
+  object-fit: cover;
+  aspect-ratio: 1/1;
 }
 
 @media (max-width: 640px) {
