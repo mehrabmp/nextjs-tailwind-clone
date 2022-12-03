@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['var(--font-inter)', ...fontFamily.sans],
+        grotesk: 'var(--font-grotesk)',
       },
       colors: {
         primary: '#0070f3',
