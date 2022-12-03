@@ -1,3 +1,13 @@
+import { Header, Hero } from 'components';
+
 export default function Page() {
-  return <h1>Hello, Next.js!</h1>;
+  return (
+    <>
+      <Header />
+      <main>
+        <Hero />
+      </main>
+      <footer></footer>
+    </>
+  );
 }
