@@ -1,4 +1,4 @@
-import { Header, Hero, Intro } from 'components';
+import { Features, Header, Hero, Intro } from 'components';
 
 export default function Page() {
   return (
@@ -7,6 +7,7 @@ export default function Page() {
       <main>
         <Hero />
         <Intro />
+        <Features />
       </main>
       <footer></footer>
     </>
