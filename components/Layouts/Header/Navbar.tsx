@@ -1,7 +1,10 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from 'components';
 import { BsGithub } from 'react-icons/bs';
+import { useEffect, useState } from 'react';
 
 const navbarLinks = [
   { name: 'Showcase', href: '/showcase' },
@@ -13,8 +16,26 @@ const navbarLinks = [
 ];
 
 export const Navbar = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="bg-transparent">
+    <div
+      className={`${
+        scrollPosition > 20 ? 'bg-white opacity-[85%] ' : 'bg-transparent'
+      } transition-[background-color] duration-300`}
+    >
       <div className="mx-auto flex h-20 w-full max-w-5xl items-center justify-between  px-4 text-sm text-neutral-100 sm:text-base">
         <Image
           src="/nextjs-logo.svg"
